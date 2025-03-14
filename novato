@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main(){
+	
+    int torre, casastorre = 1, bispo , casasbispo =1,rainha;
+	
+	printf("quantas casas gostaria que a torre andasse para a direta?");
+	scanf("%d",&torre);
+	
+	while(casastorre <=torre){
+		printf("torre se mouveu %d casa(s) para direita\n",casastorre);
+		casastorre++;
+	}
+    printf("----------------------------------------------------------------------------------\n");
+
+    printf("quantas casas gostaria que o bispo andasse para a diagonal para cima a direta?");
+    scanf("%d",&bispo);  
+
+    do{   
+        printf("bispo se mouveu %d casa(S) para direita\n",casasbispo);
+        casasbispo++;
+       
+    }while(casasbispo <=bispo);
+
+    printf("-----------------------------------------------------------------------------------\n");
+
+    printf("quantas casas gostaria de mover a rainha para a direta");
+    scanf("%d",&rainha);
+
+    for(int casadarainha = 0;casadarainha <=rainha;casadarainha++){
+        printf("rainha se mouveu %d casa(S) para direita\n", casadarainha);
+    }
+       
+	return 0;
+}
