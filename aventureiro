@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+int main(){
+	
+    int torre, casastorre = 1, bispo , casasbispo =1,rainha,escolha,casadocavalo =1;
+	
+	printf("quantas casas gostaria que a torre andasse para a direta?");
+	scanf("%d",&torre);
+	
+	while(casastorre <=torre){
+		printf("torre se mouveu %d casa(s) para direita\n",casastorre);
+		casastorre++;
+	}
+    printf("----------------------------------------------------------------------------------\n");
+
+    printf("quantas casas gostaria que o bispo andasse para a diagonal para cima a direta?");
+    scanf("%d",&bispo);  
+
+    do{   
+        printf("bispo se mouveu %d casa(S) para direita\n",casasbispo);
+        casasbispo++;
+       
+    }while(casasbispo <=bispo);
+
+    printf("-----------------------------------------------------------------------------------\n");
+
+    printf("quantas casas gostaria de mover a rainha para a esquerda");
+    scanf("%d",&rainha);
+
+    for(int casadarainha = 0;casadarainha <=rainha;casadarainha++){
+        printf("rainha se mouveu %d casa(S) para a esquerda\n", casadarainha);
+    }
+ 
+    printf("--------------------------------------------------------------------");
+
+    printf("gostaria de movimentar o cavalo?\n");
+    printf("digite 1: para movimentalo\n");
+    printf("digite 2: para ir para a proxima peça do jogo\n");
+    scanf("%d",&escolha);
+
+    printf("------------------------------------------------------------------------------------\n");
+
+    switch(escolha){
+        case 1:
+            for(int cavalo = 1; cavalo == 1; cavalo++){
+                while(casadocavalo <= 2){
+                    printf("o cavalo andou %d casa para baixo \n",casadocavalo);
+                    casadocavalo++;
+                }
+                printf("o cavalo andou 1 casa para a esquerda\n");
+            }
+        break;
+
+        case 2:
+            printf("fim de jogo");
+        break;
+        default:
+        printf("opção invalida");
+    }
+
+	return 0;
+}
