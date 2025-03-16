@@ -1,0 +1,83 @@
+#include <stdio.h>
+
+void teste(int n){
+    if(n >0){
+    printf("torre se mouveu %d casa(s) para direita\n",n);
+        teste(n-1); 
+    }
+}
+void teste2(int n2){
+    if(n2 > 0){
+        printf("bispo se mouveu %d casa(s) para a diagonal\n",n2);
+        teste2(n2 - 1);    
+    }
+}
+void teste3(int n3){
+    if(n3 > 0){
+        printf("a rainha se mouveu %d casa(s) para a diagonal\n",n3);
+        teste3(n3 - 1);
+    }
+}   
+
+int main(){
+	
+    int torre, casastorre = 1, bispo , casasbispo =1,rainha,escolha,casadocavalo =1,cavalo,cavalo2;
+	
+	printf("quantas casas gostaria que a torre andasse para a direta?");
+	scanf("%d",&torre);
+	
+    printf("----------------------------------------------------------------------------------\n");
+
+    teste(torre);
+	
+    printf("----------------------------------------------------------------------------------\n");
+
+    printf("quantas casas gostaria que o bispo andasse para a diagonal para cima a direta?");
+    scanf("%d",&bispo);  
+
+    printf("----------------------------------------------------------------------------------\n");
+
+   while(casasbispo > 0){
+        teste2(bispo);
+        printf("na direçao a  cima a direita\n");
+        casasbispo--;
+   }
+
+    printf("-----------------------------------------------------------------------------------\n");
+
+    printf("quantas casas gostaria de mover a rainha para a esquerda");
+    scanf("%d",&rainha);
+
+    printf("---------------------------------------------------------------------------------------\n");
+
+    teste3(rainha);
+ 
+    printf("--------------------------------------------------------------------\n");
+
+    printf("gostaria de movimentar o cavalo?\n");
+    printf("digite 1: para movimentalo\n");
+    printf("digite 2: para nao movimentalo é termina o jogo mais cedo\n");
+    scanf("%d",&escolha);
+
+    printf("------------------------------------------------------------------------------------\n");
+
+    switch(escolha){
+        case 1:
+        for(int cavalo = 1; cavalo == 1 && escolha == 1; cavalo++){
+            while(casadocavalo <= 2){
+                printf("o cavalo andou %d casa para cima \n",casadocavalo);
+                casadocavalo++;
+            }
+            printf("o cavalo andou 1 casa para a direita\n");
+        }
+        break;
+
+        case 2:
+            printf("fim de jogo");
+        break;
+        default:
+        printf("opção invalida");
+    }
+
+	return 0;
+}
