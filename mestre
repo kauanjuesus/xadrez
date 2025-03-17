@@ -8,7 +8,8 @@ void teste(int n){
 }
 void teste2(int n2){
     if(n2 > 0){
-        printf("bispo se mouveu %d casa(s) para a diagonal\n",n2);
+        printf("bispo se mouveu %d casa(s) para cima\n",n2);
+        printf("bispo se mouveu %d casa(s) para direita\n",n2);
         teste2(n2 - 1);    
     }
 }
@@ -39,7 +40,6 @@ int main(){
 
    while(casasbispo > 0){
         teste2(bispo);
-        printf("na direçao a  cima a direita\n");
         casasbispo--;
    }
 
