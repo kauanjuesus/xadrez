@@ -17,7 +17,8 @@ int main(){
     scanf("%d",&bispo);  
 
     do{   
-        printf("bispo se mouveu %d casa(S) para direita\n",casasbispo);
+        printf("bispo se mouveu %d casa(S) para cima \n",casasbispo);
+        printf("bispo se mouveu %d casa(S) para direita \n",casasbispo);
         casasbispo++;
        
     }while(casasbispo <=bispo);
@@ -35,7 +36,7 @@ int main(){
 
     printf("gostaria de movimentar o cavalo?\n");
     printf("digite 1: para movimentalo\n");
-    printf("digite 2: para ir para a proxima peça do jogo\n");
+    printf("digite 2: para termina o jogo\n");
     scanf("%d",&escolha);
 
     printf("------------------------------------------------------------------------------------\n");
