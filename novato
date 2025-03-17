@@ -17,6 +17,7 @@ int main(){
     scanf("%d",&bispo);  
 
     do{   
+        printf("bispo se mouveu %d casa(S) para cima\n",casasbispo);
         printf("bispo se mouveu %d casa(S) para direita\n",casasbispo);
         casasbispo++;
        
